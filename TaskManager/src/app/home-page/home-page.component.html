@@ -1,0 +1,61 @@
+<div class ="body">
+
+  <app-login-page (UserName)="UserName($event)"></app-login-page>
+
+  <div class="">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">search</i>
+          <input type="text" class="form-control" [(ngModel)]="search" placeholder = "Search Event"/>
+        </div>
+      </div>
+  </div>
+
+  <div class="page-header">
+
+   
+
+    <div class = "New Event">
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="event" placeholder = "Event"/>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" [(ngModel)]="date" placeholder = "Date" />
+      </div>
+    </div>
+    <div class="col-md-1">
+      <button class="btn waves-effect waves-light" (click)="addEvent(event, date)" type="submit" >New Event!<i class="material-icons right">add</i></button>
+    </div>
+  </div>
+  <div class="table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Edit/Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let ev of events | search: search">
+          <td>{{ev.event}}</td>
+          <td>{{ev.date}}</td>
+          <p>
+            <label>
+              <input type="checkbox" class="Delete" [(ngModel)]="ev.delete" checked="checked" />
+              <span></span>
+            </label>
+          </p>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="right">
+    <button (click)="editEvent(event, date)" class="btn waves-effect waves-light" type="submit" name="action">Edit Events
+      <i class="material-icons right">edit</i>
+    </button>
+    <button (click)="deleteEvent()" class="btn waves-effect waves-light" type="submit" name="action">Delete Events
+      <i class="material-icons right">delete</i>
+    </button>
+  </div>
+</div>

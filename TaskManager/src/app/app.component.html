@@ -1,0 +1,100 @@
+<nav>
+  <div class="nav-wrapper">
+
+    <a href="/" class="brand-logo"><i class="material-icons">
+          
+      <img class="image" width="90" alt="Task Manager Logo" src="https://pp.userapi.com/c845520/v845520236/5d63e/LCKDRuKPEGQ.jpg">
+      </i>Task Manager</a>
+          
+
+      <ul class="right hide-on-med-and-down">
+        <li>
+          
+        </li>
+          <li><a routerLink="/info" class="btn-floating pulse"><i class="material-icons">info</i></a></li>
+      </ul>
+      
+  </div>
+</nav>
+
+<div class ="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+<!-- <div class ="body">
+  <div class="page-header">
+    
+    <nav>
+      <div class="nav-wrapper">
+
+        <a href="#!" class="brand-logo"><i class="material-icons">
+          
+          <img class="image" width="90" alt="Task Manager Logo" src="https://pp.userapi.com/c845520/v845520236/5d63e/LCKDRuKPEGQ.jpg">
+          </i>Task Manager</a>
+          
+
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+            <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+            <li><a (click)="deleteEvent()"><i class="material-icons">delete</i></a></li>
+            <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+      
+      </div>
+    </nav>
+
+    <input type="text" class="form-control" [(ngModel)]="searchStr" placeholder = "Search"/>
+
+    <div class="col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="event" placeholder = "Event"/>
+
+
+    </div>
+      
+    <div class="col-md-3">
+      <input type="text" class="form-control" [(ngModel)]="date" placeholder = "Date" />
+    </div>
+    
+    <div class="col-md-3">
+      <input type="number" class="form-control" [(ngModel)]="type" placeholder = "Type" />
+    </div>
+    
+
+
+    <div class="col-md-1">
+      <button class="btn waves-effect waves-light" (click)="addEvent(event, date, type)" type="submit" >New Event!<i class="material-icons right">add</i>
+  </button>
+    </div>
+  </div>
+
+  <div class="table">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor = "let ev of events | search: searchStr">
+          <td>{{ev.event}}</td>
+          <td>{{ev.date}}</td>
+
+          <p>
+            <label>
+              <input type="checkbox" class="Delete" [(ngModel)]="ev.delete" checked="checked" />
+              <span></span>
+            </label>
+          </p>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+ 
+</div> -->

@@ -1,0 +1,8 @@
+.image{
+   padding-top: 15px;
+   padding: 5px;
+   -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+   -webkit-border-radius: 10px; /* закругл. для старых Chrome и Safari */
+   -khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+   border-radius: 10px; /* закругление углов для всех, кто понимает */
+}
